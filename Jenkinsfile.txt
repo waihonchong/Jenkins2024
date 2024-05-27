@@ -2,15 +2,16 @@ pipeline {
     agent any
 
     stages {
-        stage('Design') {
-            steps {
-                echo 'Designing fake car'
-            }
-        }
         stage('Build') {
             steps {
-                echo 'Build fake car door'
-                echo 'Build fake car windows'
+                echo 'Building java class file'
+				sh 'javac HelloWorld.java'
+            }
+        }
+        stage('Run') {
+            steps {
+                echo 'Running java file'
+                sh 'java HelloWorld'
             }
         }
     }
