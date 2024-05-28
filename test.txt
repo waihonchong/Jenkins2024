@@ -1,0 +1,37 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                dir('C:/Users/sdwhchong/Documents/GitHub/Jenkins2024/test.bat') {
+                    /* execute commands in the scripts directory */
+                }
+            	bat 'C:/Users/sdwhchong/Documents/GitHub/Jenkins2024/test.bat'
+            }
+        }
+        stage('Test') {
+            steps {
+                dir('C:/Users/sdwhchong/Documents/GitHub/Jenkins2024/test.bat') {
+                    /* execute commands in the scripts directory */
+                }
+                bat 'C:/Users/sdwhchong/Documents/GitHub/Jenkins2024/test.bat'
+            }
+        }
+      stage('Package') {
+            steps {
+                dir('C:/Users/sdwhchong/Documents/GitHub/Jenkins2024/test.bat') {
+                    /* execute commands in the scripts directory */
+                }
+                bat 'C:/Users/sdwhchong/Documents/GitHub/Jenkins2024/test.bat'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                dir('C:/Users/sdwhchong/Documents/GitHub/Jenkins2024/test.bat') {
+                    /* execute commands in the scripts directory */
+                }
+                bat 'C:/Users/sdwhchong/Documents/GitHub/Jenkins2024/test.bat'
+            }
+        }
+    }
+}
